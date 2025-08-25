@@ -216,7 +216,7 @@
     <div class="container">
         <!-- Header Section -->
         <div class="header">
-            <table class="header-table" width="100%" style="border-collapse: collapse; margin-bottom: 20px;">
+            <table class="header-table" width="100%" style="border-collapse: collapse; margin-bottom: 10px;">
                 <tr>
                     <!-- Kolom 1: Logo -->
                     <td width="10%">
@@ -248,7 +248,7 @@
 
         <!-- Info Section -->
         <div class="info-section">
-            <table width="100%" style="border-collapse: collapse; margin-bottom: 20px; font-size: 11px;">
+            <table width="100%" style="border-collapse: collapse; margin-bottom: 10px; font-size: 11px;">
                 <tr>
                     <td style="font-weight: bold; width: 150px; text-align: left;">Kepada</td>
                     <td style="width: 10px; text-align: left;">:</td>
