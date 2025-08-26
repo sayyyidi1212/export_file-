@@ -7,10 +7,13 @@
     <style>
         body {
             font-family: DejaVu Sans, sans-serif;
-            font-size: 11px;
+            font-size: 10px;
+            /* kecilin font biar muat */
             margin: 0;
-            padding: 20px;
-            line-height: 1.3;
+            padding: 15px;
+            /* lebih kecil dari 20px */
+            line-height: 1.2;
+            /* lebih rapat */
             background-color: white;
         }
 
@@ -18,8 +21,10 @@
             background-color: white;
             max-width: 210mm;
             margin: 0 auto;
-            border: 2px solid #000;
-            padding: 20px;
+            border: 1px solid #000;
+            /* tipisin border */
+            padding: 15px;
+            /* lebih rapat */
         }
 
         /* Header Section */
@@ -28,81 +33,63 @@
             grid-template-columns: auto 1fr auto;
             align-items: center;
             width: 100%;
-            font-family: DejaVu Sans, sans-serif;
-            font-size: 10px;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 15px;
+            font-size: 9px;
+            gap: 8px;
+            margin-bottom: 3px;
+            /* rapetin */
         }
 
         .logo {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
         }
 
         .header-center {
             text-align: center;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
-        }
-
-        .header-right {
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-            text-align: right;
         }
 
         /* Info Section */
         .info-section {
-            margin: 20px 0;
+            margin: 10px 0;
+            /* lebih kecil dari 20px */
         }
 
         .info-section td {
-            line-height: 1.5;
-            /* jarak antar baris lebih longgar */
-            padding-bottom: 4px;
-            /* jarak bawah tiap sel */
+            line-height: 1.2;
+            padding-bottom: 2px;
             vertical-align: top;
         }
 
         .info-row {
             display: flex;
-            /* biar label dan value sejajar */
             align-items: flex-start;
-            margin-bottom: 8px;
-            font-size: 11px;
+            margin-bottom: 5px;
+            /* rapetin */
+            font-size: 10px;
         }
 
         .info-label {
             font-weight: bold;
-            width: 160px;
-            /* lebar label tetap */
+            width: 140px;
             flex-shrink: 0;
-        }
-
-        .info-value {
-            flex: 1;
-            /* biar value memanjang ke kanan */
         }
 
         /* Items Table */
         .items-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 11px;
+            margin: 10px 0;
+            /* lebih rapat */
+            font-size: 10px;
         }
 
         .items-table th,
         .items-table td {
             border: 1px solid #000;
-            padding: 8px;
+            padding: 5px;
+            /* kecilin padding */
             text-align: left;
             vertical-align: middle;
         }
@@ -111,44 +98,19 @@
             background-color: #f5f5f5;
             font-weight: bold;
             text-align: center;
-            font-size: 10px;
-        }
-
-        .items-table .number-col {
-            width: 40px;
-            text-align: center;
-        }
-
-        .items-table .perkebunan-col {
-            width: 25%;
-        }
-
-        .items-table .jenis-col {
-            width: 20%;
-        }
-
-        .items-table .berat-col {
-            width: 15%;
-            text-align: right;
-        }
-
-        .items-table .keterangan-col {
-            width: 35%;
-        }
-
-        .total-row {
-            font-weight: bold;
-            background-color: #f9f9f9;
+            font-size: 9px;
         }
 
         .total-row td {
             border-top: 2px solid #000;
-            font-size: 12px;
+            font-size: 11px;
+            padding: 4px;
         }
 
         /* Footer Section */
         .footer {
-            margin-top: 30px;
+            margin-top: 3px;
+            /* rapetin banget */
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
@@ -156,59 +118,59 @@
 
         .notes {
             flex: 1;
-            font-size: 10px;
-            line-height: 1.4;
-            margin-right: 30px;
-            padding-right: 20px;
+            font-size: 9px;
+            line-height: 1.2;
+            margin-right: 15px;
+            padding-right: 10px;
         }
 
         .signature-section {
             text-align: center;
-            width: 250px;
+            width: 200px;
             border-left: 1px solid #ddd;
-            padding-left: 20px;
+            padding-left: 10px;
         }
 
         .signature-location {
-            font-size: 11px;
-            margin-bottom: 8px;
+            font-size: 10px;
+            margin-bottom: 5px;
         }
 
         .signature-title {
-            font-size: 11px;
+            font-size: 10px;
             font-weight: bold;
-            margin-bottom: 5px;
-            text-transform: uppercase;
+            margin-bottom: 4px;
         }
 
         .signature-company {
-            font-size: 10px;
-            margin-bottom: 30px;
+            font-size: 9px;
+            margin-bottom: 15px;
         }
 
         .stamp-area {
-            width: 100px;
-            height: 100px;
-            border: 2px solid #000;
-            margin: 0 auto 20px;
+            width: 80px;
+            height: 80px;
+            border: 1px solid #000;
+            margin: 0 auto 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 9px;
+            font-size: 8px;
             text-align: center;
             font-weight: bold;
         }
 
         .signature-name {
-            font-size: 11px;
+            font-size: 10px;
             font-weight: bold;
-            border-bottom: 2px solid #000;
-            padding-bottom: 3px;
-            margin-bottom: 5px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 2px;
+            margin-bottom: 4px;
             display: inline-block;
-            min-width: 180px;
+            min-width: 150px;
         }
     </style>
+
 </head>
 
 <body>
@@ -276,43 +238,60 @@
             </table>
         </div>
 
-
         <!-- Items Table -->
         <div class="items-wrapper">
-            <table class="items-table">
+            <table class="items-table" style="width: 100%; border-collapse: collapse; font-size: 11px;">
                 <thead>
                     <tr>
-                        <th class="number-col">No</th>
-                        <th class="perkebunan-col">Perkebunan</th>
-                        <th class="jenis-col">Jenis / Mutu</th>
-                        <th class="berat-col">Berat Bersih<br>(Kg)</th>
-                        <th class="keterangan-col">Keterangan</th>
+                        <th style="border: 1px solid #000; padding: 6px; text-align: center;">Kebun</th>
+                        <th style="border: 1px solid #000; padding: 6px; text-align: center;">Jenis / Mutu</th>
+                        <th style="border: 1px solid #000; padding: 6px; text-align: center;">Berat (Kg)</th>
+                        <th style="border: 1px solid #000; padding: 6px; text-align: center;">Harga Satuan / Kg (Rp)</th>
+                        <th style="border: 1px solid #000; padding: 6px; text-align: center;">Jumlah (Rp)</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @php $no = 1; @endphp
-                    @foreach($items ?? [
-                    ['perkebunan' => 'PTPN 1', 'jenis' => 'RSS 3', 'berat' => '978,00', 'keterangan' => ''],
-                    ['perkebunan' => 'PTPN 2', 'jenis' => 'RSS 3', 'berat' => '1.500,00', 'keterangan' => ''],
-                    ['perkebunan' => 'PTPN 3', 'jenis' => 'RSS 3', 'berat' => '1.200,00', 'keterangan' => ''],
-                    ['perkebunan' => 'LAIN LAIN', 'jenis' => 'RSS 3', 'berat' => '1.642,00', 'keterangan' => '']
-                    ] as $item)
+                    @php $grandTotal = 0; @endphp
+                    @foreach ($items as $perkebunan => $rows)
+                    @php $rowspan = count($rows); @endphp
+                    @foreach ($rows as $i => $item)
                     <tr>
-                        <td class="number-col">{{ $no++ }}</td>
-                        <td class="perkebunan-col">{{ $item['perkebunan'] }}</td>
-                        <td class="jenis-col">{{ $item['jenis'] }}</td>
-                        <td class="berat-col">{{ $item['berat'] }}</td>
-                        <td class="keterangan-col">{{ $item['keterangan'] ?? '' }}</td>
+                        @if ($i == 0)
+                        <td style="border: 1px solid #000; padding: 6px; vertical-align: top;" rowspan="{{ $rowspan }}">
+                            {{ $perkebunan }}
+                        </td>
+                        @endif
+                        <td style="border: 1px solid #000; padding: 6px; text-align: center;">
+                            {{ $item['jenis'] }}
+                        </td>
+                        <td style="border: 1px solid #000; padding: 6px; text-align: right;">
+                            {{ number_format($item['berat'], 0, ',', '.') }}
+                        </td>
+                        <td style="border: 1px solid #000; padding: 6px; text-align: right;">
+                            {{ number_format($item['harga'], 0, ',', '.') }}
+                        </td>
+                        <td style="border: 1px solid #000; padding: 6px; text-align: right;">
+                            @php
+                            $jumlah = $item['berat'] * $item['harga'];
+                            $grandTotal += $jumlah;
+                            @endphp
+                            {{ number_format($jumlah, 0, ',', '.') }}
+                        </td>
                     </tr>
                     @endforeach
+                    @endforeach
                     <tr class="total-row">
-                        <td colspan="3" style="text-align: center;"><strong>J U M L A H</strong></td>
-                        <td class="berat-col"><strong>{{ $total ?? '5.320,00' }}</strong></td>
-                        <td></td>
+                        <td colspan="4" style="border: 1px solid #000; text-align: center; font-weight: bold;">
+                            TOTAL
+                        </td>
+                        <td style="border: 1px solid #000; text-align: right; font-weight: bold;">
+                            {{ number_format($grandTotal, 0, ',', '.') }}
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
+
 
         <!-- Footer -->
         <div class="footer-wrapper">

@@ -44,18 +44,37 @@ class LelangController extends Controller
         return $pdf->download('pemenang1.pdf');
     }
 
-    // pemenang 2
+    // Pemenang 2
     public function exportPemenang2()
     {
         $items = [
-            ['perkebunan' => 'Sumberwadung', 'jenis' => 'RSS III', 'berat' => 385, 'keterangan' => ''],
-            ['perkebunan' => 'Sumberwadung', 'jenis' => 'Cutting', 'berat' => 540, 'keterangan' => ''],
+            'Sumberwadung' => [
+                ['jenis' => 'RSS I', 'berat' => 678, 'harga' => 32500],
+                ['jenis' => 'RSS II', 'berat' => 113, 'harga' => 32400],
+                ['jenis' => 'RSS III', 'berat' => 565, 'harga' => 32300],
+                ['jenis' => 'Cutting', 'berat' => 2260, 'harga' => 30500],
+            ],
+            'Kalimrawan' => [
+                ['jenis' => 'RSS I', 'berat' => 1582, 'harga' => 32500],
+                ['jenis' => 'RSS II', 'berat' => 339, 'harga' => 32400],
+                ['jenis' => 'Cutting', 'berat' => 678, 'harga' => 30500],
+            ]
         ];
-        $total = 925;
 
-        $pdf = Pdf::loadView('pdf.pemenang2', compact('items', 'total'))->setPaper('A4', 'portrait');
+        // Hitung total berat per perkebunan
+        $totals = [];
+        foreach ($items as $perkebunan => $list) {
+            $totals[$perkebunan] = array_sum(array_column($list, 'berat'));
+        }
+
+        $pdf = Pdf::loadView('pdf.pemenang2', [
+            'items'  => $items,
+            'totals' => $totals,
+        ])->setPaper('A4', 'portrait');
+
         return $pdf->download('pemenang2.pdf');
     }
+
 
     // pemenang 3
     public function exportPemenang3()
