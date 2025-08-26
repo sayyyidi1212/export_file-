@@ -19,19 +19,20 @@
             max-width: 210mm;
             margin: 0 auto;
             border: 2px solid #000;
-            padding: 20px;
+            /* border utama */
+            padding: 0;
         }
 
-        /* Header Section */
+        /* ==== Header Section ==== */
         .header {
             display: grid;
             grid-template-columns: auto 1fr auto;
             align-items: center;
-            width: 100%;
-            font-family: DejaVu Sans, sans-serif;
             font-size: 10px;
             gap: 10px;
-            margin-bottom: 15px;
+            padding: 10px;
+            border-bottom: 2px solid #000;
+            /* pemisah */
         }
 
         .header-left {
@@ -58,52 +59,41 @@
             text-align: right;
         }
 
-        /* Info Section */
+        /* ==== Info Section ==== */
         .info-section {
-            margin: 20px 0;
-        }
-
-        .info-section td {
-            line-height: 1.5;
-            /* jarak antar baris lebih longgar */
-            padding-bottom: 4px;
-            /* jarak bawah tiap sel */
-            vertical-align: top;
+            padding: 10px;
+            border-bottom: 2px solid #000;
+            /* garis bawah */
         }
 
         .info-row {
             display: flex;
-            /* biar label dan value sejajar */
             align-items: flex-start;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-size: 11px;
         }
 
         .info-label {
             font-weight: bold;
             width: 160px;
-            /* lebar label tetap */
             flex-shrink: 0;
         }
 
         .info-value {
             flex: 1;
-            /* biar value memanjang ke kanan */
         }
 
-        /* Items Table */
+        /* ==== Items Table ==== */
         .items-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
             font-size: 11px;
         }
 
         .items-table th,
         .items-table td {
             border: 1px solid #000;
-            padding: 8px;
-            text-align: left;
+            padding: 6px;
             vertical-align: middle;
         }
 
@@ -146,12 +136,14 @@
             font-size: 12px;
         }
 
-        /* Footer Section */
+        /* ==== Footer Section ==== */
         .footer {
-            margin-top: 30px;
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
+            padding: 15px;
+            border-top: 2px solid #000;
+            /* garis atas nyambung */
         }
 
         .notes {
@@ -165,7 +157,6 @@
         .signature-section {
             text-align: center;
             width: 250px;
-            border-left: 1px solid #ddd;
             padding-left: 20px;
         }
 
@@ -209,6 +200,8 @@
             min-width: 180px;
         }
     </style>
+
+
 </head>
 
 <body>
@@ -341,12 +334,17 @@
             </div>
 
             <!-- Catatan tambahan di bawah footer -->
-            <div style="margin-top: 10px; font-size: 10px; line-height: 1.3;">
+            <!-- Catatan tambahan di bawah footer -->
+            <div style="margin-top: 10px; ; padding-left: 25px; font-size: 10px; line-height: 1.4; text-align: left; border-top: 1px solid #000; padding-top: 5px;">
                 <p><strong>Catatan:</strong></p>
-                <p>1: Barang diterima sesuai pesanan.</p>
-                <p>2: Mohon diperiksa kondisi barang sebelum ditandatangani.</p>
-                <p>3: Simpan dokumen ini sebagai bukti pengiriman.</p>
+                <ol style="margin: 0; padding-left: 25px;">
+                    <li>Barang diterima sesuai pesanan.</li>
+                    <li>Mohon diperiksa kondisi barang sebelum ditandatangani.</li>
+                    <li>Simpan dokumen ini sebagai bukti pengiriman.</li>
+                </ol>
             </div>
+
+
         </div>
 
 
