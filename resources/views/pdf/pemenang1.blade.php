@@ -92,7 +92,7 @@
 
         .items-table th,
         .items-table td {
-            border: 1px solid #000;
+            border: 0.5px solid #000;
             padding: 6px;
             vertical-align: middle;
         }
@@ -335,16 +335,12 @@
 
             <!-- Catatan tambahan di bawah footer -->
             <!-- Catatan tambahan di bawah footer -->
-            <div style="margin-top: 10px; ; padding-left: 25px; font-size: 10px; line-height: 1.4; text-align: left; border-top: 1px solid #000; padding-top: 5px;">
+            <div style="margin-top: 10px; font-size: 10px; line-height: 1.3; padding-left: 15px; text-align: left; border-top: 1px solid #000; padding-top: 5px;">
                 <p><strong>Catatan:</strong></p>
-                <ol style="margin: 0; padding-left: 25px;">
-                    <li>Barang diterima sesuai pesanan.</li>
-                    <li>Mohon diperiksa kondisi barang sebelum ditandatangani.</li>
-                    <li>Simpan dokumen ini sebagai bukti pengiriman.</li>
-                </ol>
+                <p>1: Barang diterima sesuai pesanan.</p>
+                <p>2: Mohon diperiksa kondisi barang sebelum ditandatangani.</p>
+                <p>3: Simpan dokumen ini sebagai bukti pengiriman.</p>
             </div>
-
-
         </div>
 
 

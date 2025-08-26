@@ -77,17 +77,21 @@ class LelangController extends Controller
 
 
     // pemenang 3
-    public function exportPemenang3()
-    {
-        $items = [
-            ['perkebunan' => 'Sumberwadung', 'jenis' => 'Mix A', 'berat' => 300, 'keterangan' => ''],
-            ['perkebunan' => 'Sumberwadung', 'jenis' => 'Mix B', 'berat' => 400, 'keterangan' => ''],
-        ];
-        $total = 700;
+public function exportPemenang3()
+{
+    $harga = [
+        'RSS 1' => 'Rp23.500,-',
+        'RSS 3' => 'Rp22.300,-',
+        'RSS 5' => 'Rp21.300,-',
+        'GUTTINS' => 'Rp18.300,-',
+    ];
 
-        $pdf = Pdf::loadView('pdf.pemenang3', compact('items', 'total'))->setPaper('A4', 'portrait');
-        return $pdf->download('pemenang3.pdf');
-    }
+    $pdf = Pdf::loadView('pdf.pemenang3', compact('harga'))
+              ->setPaper('A4', 'portrait');
+
+    return $pdf->download('pemenang3.pdf');
+}
+
 
     // pemenang 4
     public function exportPemenang4()

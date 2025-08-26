@@ -7,13 +7,10 @@
     <style>
         body {
             font-family: DejaVu Sans, sans-serif;
-            font-size: 10px;
-            /* kecilin font biar muat */
+            font-size: 11px;
             margin: 0;
-            padding: 15px;
-            /* lebih kecil dari 20px */
-            line-height: 1.2;
-            /* lebih rapat */
+            padding: 20px;
+            line-height: 1.3;
             background-color: white;
         }
 
@@ -21,76 +18,37 @@
             background-color: white;
             max-width: 210mm;
             margin: 0 auto;
-            border: 1px solid #000;
-            /* tipisin border */
-            padding: 15px;
-            /* lebih rapat */
+            border: 2px solid #000;
+            /* border utama */
+            padding: 0;
         }
 
-        /* Header Section */
+        /* ==== Header Section ==== */
         .header {
-            display: grid;
-            grid-template-columns: auto 1fr auto;
-            align-items: center;
-            width: 100%;
-            font-size: 9px;
-            gap: 8px;
-            margin-bottom: 3px;
-            /* rapetin */
+            padding: 10px;
+            border-bottom: 2px solid #000;
+            /* garis tebal bawah header */
         }
 
-        .logo {
-            width: 50px;
-            height: 50px;
-        }
-
-        .header-center {
-            text-align: center;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        /* Info Section */
+        /* ==== Info Section ==== */
         .info-section {
-            margin: 10px 0;
-            /* lebih kecil dari 20px */
+            padding: 10px;
+            border-bottom: 2px solid #000;
+            /* garis tebal bawah info */
         }
 
-        .info-section td {
-            line-height: 1.2;
-            padding-bottom: 2px;
-            vertical-align: top;
-        }
-
-        .info-row {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 5px;
-            /* rapetin */
-            font-size: 10px;
-        }
-
-        .info-label {
-            font-weight: bold;
-            width: 140px;
-            flex-shrink: 0;
-        }
-
-        /* Items Table */
+        /* ==== Items Table ==== */
         .items-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 10px 0;
-            /* lebih rapat */
-            font-size: 10px;
+            font-size: 11px;
         }
 
         .items-table th,
         .items-table td {
-            border: 1px solid #000;
-            padding: 5px;
-            /* kecilin padding */
-            text-align: left;
+            border: 0.5px solid #000;
+            /* garis tabel tipis */
+            padding: 6px;
             vertical-align: middle;
         }
 
@@ -98,78 +56,70 @@
             background-color: #f5f5f5;
             font-weight: bold;
             text-align: center;
-            font-size: 9px;
+            font-size: 10px;
         }
 
         .total-row td {
             border-top: 2px solid #000;
-            font-size: 11px;
-            padding: 4px;
+            font-weight: bold;
+            background-color: #f9f9f9;
+            font-size: 12px;
         }
 
-        /* Footer Section */
+        /* ==== Footer Section ==== */
         .footer {
-            margin-top: 3px;
-            /* rapetin banget */
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
+            padding: 15px;
+            border-top: 2px solid #000;
+            /* garis tebal atas footer */
         }
 
         .notes {
             flex: 1;
-            font-size: 9px;
-            line-height: 1.2;
-            margin-right: 15px;
-            padding-right: 10px;
+            font-size: 10px;
+            line-height: 1.4;
+            margin-right: 30px;
+            padding-right: 20px;
         }
 
         .signature-section {
             text-align: center;
-            width: 200px;
-            border-left: 1px solid #ddd;
-            padding-left: 10px;
-        }
-
-        .signature-location {
-            font-size: 10px;
-            margin-bottom: 5px;
-        }
-
-        .signature-title {
-            font-size: 10px;
-            font-weight: bold;
-            margin-bottom: 4px;
-        }
-
-        .signature-company {
-            font-size: 9px;
-            margin-bottom: 15px;
+            width: 250px;
+            padding-left: 20px;
         }
 
         .stamp-area {
-            width: 80px;
-            height: 80px;
-            border: 1px solid #000;
-            margin: 0 auto 15px;
+            width: 100px;
+            height: 100px;
+            border: 2px solid #000;
+            margin: 0 auto 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 8px;
+            font-size: 9px;
             text-align: center;
             font-weight: bold;
         }
 
-        .signature-name {
+        /* ==== Catatan tambahan bawah ==== */
+        .extra-notes {
+            margin-top: 5px;
+            padding: 8px 15px;
             font-size: 10px;
-            font-weight: bold;
-            border-bottom: 1px solid #000;
-            padding-bottom: 2px;
-            margin-bottom: 4px;
-            display: inline-block;
-            min-width: 150px;
+            line-height: 1.4;
+            border-top: 1px solid #000;
+            /* garis tipis */
+            text-align: left;
+        }
+
+        .extra-notes ol {
+            margin: 0;
+            padding-left: 18px;
         }
     </style>
+
 
 </head>
 
@@ -320,7 +270,7 @@
             </div>
 
             <!-- Catatan tambahan di bawah footer -->
-            <div style="margin-top: 10px; font-size: 10px; line-height: 1.3;">
+            <div style="margin-top: 10px; font-size: 10px; line-height: 1.3; padding-left: 15px; text-align: left; border-top: 1px solid #000; padding-top: 5px;">
                 <p><strong>Catatan:</strong></p>
                 <p>1: Barang diterima sesuai pesanan.</p>
                 <p>2: Mohon diperiksa kondisi barang sebelum ditandatangani.</p>
