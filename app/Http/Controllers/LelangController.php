@@ -77,20 +77,20 @@ class LelangController extends Controller
 
 
     // pemenang 3
-public function exportPemenang3()
-{
-    $harga = [
-        'RSS 1' => 'Rp23.500,-',
-        'RSS 3' => 'Rp22.300,-',
-        'RSS 5' => 'Rp21.300,-',
-        'GUTTINS' => 'Rp18.300,-',
-    ];
+    public function exportPemenang3()
+    {
+        $harga = [
+            'RSS 1' => 'Rp23.500,-',
+            'RSS 3' => 'Rp22.300,-',
+            'RSS 5' => 'Rp21.300,-',
+            'GUTTINS' => 'Rp18.300,-',
+        ];
 
-    $pdf = Pdf::loadView('pdf.pemenang3', compact('harga'))
-              ->setPaper('A4', 'portrait');
+        $pdf = Pdf::loadView('pdf.pemenang3', compact('harga'))
+            ->setPaper('A4', 'portrait');
 
-    return $pdf->download('pemenang3.pdf');
-}
+        return $pdf->download('pemenang3.pdf');
+    }
 
 
     // pemenang 4
@@ -106,18 +106,29 @@ public function exportPemenang3()
         return $pdf->download('pemenang4.pdf');
     }
 
-    // pemenang 5
+    /// Pemenang 5
     public function exportPemenang5()
     {
-        $items = [
-            ['perkebunan' => 'Sumberwadung', 'jenis' => 'Mix E', 'berat' => 200, 'keterangan' => ''],
-            ['perkebunan' => 'Sumberwadung', 'jenis' => 'Mix F', 'berat' => 300, 'keterangan' => ''],
+        // data sederhana
+        $rekanan = [
+            ['no' => 1, 'nama' => 'PT. Nasional Bhirawa Tama', 'qty' => 9492, 'harga' => 32500, 'total' => 301969000],
+            ['no' => 2, 'nama' => 'CV. Azura Karya Rubber', 'qty' => 9492, 'harga' => 31075, 'total' => 295505100],
+            ['no' => 3, 'nama' => 'PT. Elastik Alam Nusantara', 'qty' => 9492, 'harga' => 28800, 'total' => 273849600],
+            ['no' => 4, 'nama' => 'PT. Duawisarna Prima', 'qty' => 9492, 'harga' => 27800, 'total' => 264597600],
         ];
-        $total = 500;
+        $rekap = [
+            'terendah' => 27800,
+            'tertinggi' => 32500,
+            'rata2' => 31313,
+            'rata2_ppn' => 35312.43,
+        ];
 
-        $pdf = Pdf::loadView('pdf.pemenang5', compact('items', 'total'))->setPaper('A4', 'portrait');
+        $pdf = Pdf::loadView('pdf.pemenang5', compact('rekanan', 'rekap'))
+            ->setPaper('A4', 'portrait');
+
         return $pdf->download('pemenang5.pdf');
     }
+
 
     // pemenang 6
     public function exportPemenang6()

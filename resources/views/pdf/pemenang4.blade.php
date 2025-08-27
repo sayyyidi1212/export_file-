@@ -122,7 +122,16 @@
     <div class="content" style="font-size: 11px; line-height: 1.6;">
         <table width="100%">
             <tr>
-                <td width="30%" style="text-align: right; vertical-align: top; font-size: 10px;">
+                <!-- Kolom Kiri -->
+                <td width="50%" style="text-align: left; vertical-align: top; font-size: 10px;">
+                    <p>Nomor : 08200208208</p>
+                    <p>Sifat : Penting</p>
+                    <P>lapiran : - </P>
+                    <p>Perihal : Permintaan Penawaran Harga Karet RSS</p>
+                </td>
+
+                <!-- Kolom Kanan -->
+                <td width="50%" style="text-align: right; vertical-align: top; font-size: 10px;">
                     <p>Jember, 17 April 2025</p>
                     <p>Kepada Yth.<br>
                         Rekanan<br>
@@ -133,12 +142,13 @@
             </tr>
         </table>
 
-        <p>
+
+        <p style="text-indent: 20px;">
             Menindaklanjuti surat penawaran Saudara tanggal <b>17 April 2025</b> perihal penawaran harga karet RSS,
             bersama ini kami sampaikan agar Saudara dapat menaikkan harga penawaran.
         </p>
 
-        <p class="bold">
+        <p style="text-indent: 20px;">
             Penawaran balasan dapat kami terima paling lambat pada tanggal <b>17 April 2025</b> pukul <b>14.15 WIB</b>.
         </p>
 
@@ -161,8 +171,8 @@
         <p class="bold"><u>NURUL HIDAYAT, STP</u></p>
     </div>
 
- <!-- Footer -->
-<footer style="
+    <!-- Footer -->
+    <footer style="
     position: fixed; 
     bottom: 0; 
     left: 0; 
@@ -172,15 +182,15 @@
     padding: 10px 0;
   
 ">
-    <p>Ikuti Kami:</p>
-    <p>
-        <a href="https://www.instagram.com/pdp_official" target="_blank">Instagram</a> |
-        <a href="https://www.facebook.com/pdp.official" target="_blank">Facebook</a> |
-        <a href="https://x.com/pdp_official" target="_blank">Twitter/X</a> |
-        <a href="https://www.youtube.com/@pdpjember" target="_blank">YouTube</a>
-    </p>
-    <p>Email: <a href="mailto:sekretariat@pdp.kahyangan.co.id">sekretariat@pdp.kahyangan.co.id</a></p>
-</footer>
+        <p>Ikuti Kami:</p>
+        <p>
+            <a href="https://www.instagram.com/pdp_official" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com/pdp.official" target="_blank">Facebook</a> |
+            <a href="https://x.com/pdp_official" target="_blank">Twitter/X</a> |
+            <a href="https://www.youtube.com/@pdpjember" target="_blank">YouTube</a>
+        </p>
+        <p>Email: <a href="mailto:sekretariat@pdp.kahyangan.co.id">sekretariat@pdp.kahyangan.co.id</a></p>
+    </footer>
 
 
 </body>
