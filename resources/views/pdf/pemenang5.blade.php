@@ -121,18 +121,46 @@
     <!-- Isi Surat -->
     <div class="content" style="font-size: 11px; line-height: 1.6;">
         <table width="100%" style="border-bottom: 2px solid #000; margin-bottom: 10px; padding-bottom: 5px;">
-            <tr>
-                <!-- Kolom Kiri -->
-                <td width="50%" style="text-align: left; vertical-align: top; font-size: 10px;">
-                    <p>Kepada : yth. Sdr. Direktur Utama </p>
-                    <p>Dari : Direktur Produksi</p>
-                    <p>Tanggal : 17 April 2025</p>
-                    <p>Nomor : 08200208208</p>
-                    <p>Sifat : Penting</p>
-                    <p>Lampiran : - </p>
-                    <p>Perihal : Permintaan Penawaran Harga Karet RSS</p>
-                </td>
-            </tr>
+            <div class="info-section">
+                <table width="100%" style="border-collapse: collapse; margin-bottom: 10px; font-size: 11px;">
+                    <tr>
+                        <td style="font-weight: bold; width: 120px; text-align: left;">Kepada</td>
+                        <td style="width: 10px; text-align: left;">:</td>
+                        <td>{{ $kepada ?? 'yth. Sdr. Direktur Utama' }}</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; text-align: left;">Dari</td>
+                        <td style="text-align: left;">:</td>
+                        <td>{{ $dari ?? 'Direktur Produksi' }}</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; text-align: left;">Tanggal</td>
+                        <td style="text-align: left;">:</td>
+                        <td>{{ $tanggal ?? '17 April 2025' }}</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; text-align: left;">Nomor</td>
+                        <td style="text-align: left;">:</td>
+                        <td>{{ $nomor ?? '08200208208' }}</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; text-align: left;">Sifat</td>
+                        <td style="text-align: left;">:</td>
+                        <td>{{ $sifat ?? 'Penting' }}</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; text-align: left;">Lampiran</td>
+                        <td style="text-align: left;">:</td>
+                        <td>{{ $lampiran ?? '-' }}</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; text-align: left;">Perihal</td>
+                        <td style="text-align: left;">:</td>
+                        <td>{{ $perihal ?? 'Permintaan Penawaran Harga Karet RSS' }}</td>
+                    </tr>
+                </table>
+            </div>
+
         </table>
 
 

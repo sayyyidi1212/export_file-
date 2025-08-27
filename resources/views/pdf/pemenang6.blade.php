@@ -120,17 +120,24 @@
     </div>
     <!-- Isi Surat -->
     <div class="content" style="font-size: 11px; line-height: 1.6;">
-        <table width="100%" style="border-bottom: 2px solid #000; margin-bottom: 10px; padding-bottom: 5px;">
+      <table width="100%">
             <tr>
                 <!-- Kolom Kiri -->
                 <td width="50%" style="text-align: left; vertical-align: top; font-size: 10px;">
-                    <p>Kepada : yth. Sdr. Direktur Utama </p>
-                    <p>Dari : Direktur Produksi</p>
-                    <p>Tanggal : 17 April 2025</p>
                     <p>Nomor : 08200208208</p>
                     <p>Sifat : Penting</p>
-                    <p>Lampiran : - </p>
+                    <P>lapiran : - </P>
                     <p>Perihal : Permintaan Penawaran Harga Karet RSS</p>
+                </td>
+
+                <!-- Kolom Kanan -->
+                <td width="50%" style="text-align: right; vertical-align: top; font-size: 10px;">
+                    <p>Jember, 17 April 2025</p>
+                    <p>Kepada Yth.<br>
+                        Rekanan<br>
+                        Perumda Kahyangan<br>
+                        <span class="bold">Tempat</span>
+                    </p>
                 </td>
             </tr>
         </table>
@@ -141,55 +148,35 @@
             Menindaklanjuti Surat Direksi tanggal 17 April 2025 nomor 046/1389/TPJ/2025, sebanyak 11 (sebelas) rekanan diundang untuk melakukan penawaran dan 4 (empat) rekanan membalas, penawaran sebagai berikut:
         </p>
 
-        <!-- Tabel Rekanan -->
-        <table style="width:100%; border-collapse: collapse; margin-top: 5px; font-size:11px;">
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px;">
             <thead>
-                <tr style="background-color:#f2f2f2;">
-                    <th style="border:1px solid #000; padding:3px;">No</th>
-                    <th style="border:1px solid #000; padding:3px; text-align:left;">Rekanan</th>
-                    <th style="border:1px solid #000; padding:3px;">Qty (kg)</th>
-                    <th style="border:1px solid #000; padding:3px;">Harga RSS I</th>
-                    <th style="border:1px solid #000; padding:3px;">Total</th>
+                <tr>
+                    <th style="border: 1px solid #000; padding: 6px; text-align: center;">No</th>
+                    <th style="border: 1px solid #000; padding: 6px; text-align: center;">Perkebunan</th>
+                    <th style="border: 1px solid #000; padding: 6px; text-align: center;">Jenis</th>
+                    <th style="border: 1px solid #000; padding: 6px; text-align: center;">Berat (Kg)</th>
+                    <th style="border: 1px solid #000; padding: 6px; text-align: center;">Keterangan</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($rekanan as $r)
+                @foreach ($items as $item)
                 <tr>
-                    <td style="border:1px solid #000; padding:3px; text-align:center;">{{ $r['no'] }}</td>
-                    <td style="border:1px solid #000; padding:3px; text-align:left;">{{ $r['nama'] }}</td>
-                    <td style="border:1px solid #000; padding:3px; text-align:right;">{{ number_format($r['qty'], 0, ',', '.') }}</td>
-                    <td style="border:1px solid #000; padding:3px; text-align:right;">Rp {{ number_format($r['harga'], 0, ',', '.') }}</td>
-                    <td style="border:1px solid #000; padding:3px; text-align:right;">Rp {{ number_format($r['total'], 0, ',', '.') }}</td>
+                    <td style="border: 1px solid #000; padding: 6px; text-align: center;">{{ $item['no'] }}</td>
+                    <td style="border: 1px solid #000; padding: 6px; text-align: center;">{{ $item['perkebunan'] }}</td>
+                    <td style="border: 1px solid #000; padding: 6px; text-align: center;">{{ $item['jenis'] }}</td>
+                    <td style="border: 1px solid #000; padding: 6px; text-align: center;">{{ number_format($item['berat'], 0, ',', '.') }}</td>
+                    <td style="border: 1px solid #000; padding: 6px; text-align: center;">{{ $item['keterangan'] }}</td>
                 </tr>
                 @endforeach
             </tbody>
-        </table>
-
-        <!-- Rekap -->
-        <p style="text-indent:20px; margin-top:8px; font-size:11px;">
-            Dari 4 (empat) rekanan yang mengajukan penawaran, diperoleh hasil perhitungan
-            harga terendah, tertinggi, serta rata-rata sebagai berikut:
-        </p>
-
-        <table style="width:100%; border-collapse: collapse; margin-top: 3px; font-size:11px;">
-            <thead>
-                <tr style="background-color:#f2f2f2;">
-                    <th style="border:1px solid #000; padding:3px;">Harga Terendah</th>
-                    <th style="border:1px solid #000; padding:3px;">Harga Tertinggi</th>
-                    <th style="border:1px solid #000; padding:3px;">Harga Rata-rata</th>
-                    <th style="border:1px solid #000; padding:3px;">Harga Rata-rata + PPN 11%</th>
-                </tr>
-            </thead>
-            <tbody>
+            <tfoot>
                 <tr>
-                    <td style="border:1px solid #000; padding:3px; text-align:right;">Rp {{ number_format($rekap['terendah'], 0, ',', '.') }}</td>
-                    <td style="border:1px solid #000; padding:3px; text-align:right;">Rp {{ number_format($rekap['tertinggi'], 0, ',', '.') }}</td>
-                    <td style="border:1px solid #000; padding:3px; text-align:right;">Rp {{ number_format($rekap['rata2'], 0, ',', '.') }}</td>
-                    <td style="border:1px solid #000; padding:3px; text-align:right;">Rp {{ number_format($rekap['rata2_ppn'], 2, ',', '.') }}</td>
+                    <td colspan="3" style="border: 1px solid #000; padding: 6px; text-align: center; font-weight: bold;">TOTAL</td>
+                    <td style="border: 1px solid #000; padding: 6px; text-align: center; font-weight: bold;">{{ number_format($total, 0, ',', '.') }}</td>
+                    <td style="border: 1px solid #000; padding: 6px; text-align: center;">-</td>
                 </tr>
-            </tbody>
+            </tfoot>
         </table>
-
         <p style="margin-top:10px; text-indent: 15px; font-size:11px;">
             Demikian untuk menjadikan periksa dan mohon petunjuk lebih lanjut.
         </p>

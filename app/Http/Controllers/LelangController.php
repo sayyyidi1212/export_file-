@@ -129,17 +129,32 @@ class LelangController extends Controller
         return $pdf->download('pemenang5.pdf');
     }
 
+    // Pemenang 6
+public function exportPemenang6()
+{
+    $items = [
+        [
+            'no' => 1,
+            'perkebunan' => 'Sumberwadung',
+            'jenis' => 'Mix G',
+            'berat' => 150,
+            'keterangan' => ''
+        ],
+        [
+            'no' => 2,
+            'perkebunan' => 'Sumberwadung',
+            'jenis' => 'Mix H',
+            'berat' => 350,
+            'keterangan' => ''
+        ],
+    ];
 
-    // pemenang 6
-    public function exportPemenang6()
-    {
-        $items = [
-            ['perkebunan' => 'Sumberwadung', 'jenis' => 'Mix G', 'berat' => 150, 'keterangan' => ''],
-            ['perkebunan' => 'Sumberwadung', 'jenis' => 'Mix H', 'berat' => 350, 'keterangan' => ''],
-        ];
-        $total = 500;
+    $total = array_sum(array_column($items, 'berat'));
 
-        $pdf = Pdf::loadView('pdf.pemenang6', compact('items', 'total'))->setPaper('A4', 'portrait');
-        return $pdf->download('pemenang6.pdf');
-    }
+    $pdf = Pdf::loadView('pdf.pemenang6', compact('items', 'total'))
+        ->setPaper('A4', 'portrait');
+
+    return $pdf->download('pemenang6.pdf');
+}
+
 }
